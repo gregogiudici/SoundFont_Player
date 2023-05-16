@@ -1,12 +1,8 @@
 import 'dart:async';
-
 import 'package:flutter/widgets.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_midi/flutter_midi.dart';
 import 'package:soundfont_player/player_info.dart';
-
-// C Major pentatonic scale
-final scale = [48, 50, 52, 55, 57];
 
 class PlayerState extends ChangeNotifier {
   int nTracks;
@@ -16,24 +12,20 @@ class PlayerState extends ChangeNotifier {
 
   String _drum = "assets/StandardDrumKit.sf2";
   String get drum => _drum.replaceAll('assets/', '').replaceAll(".sf2", "");
-  String _piano = "assets/Player_Piano.sf2";
+  String _piano = "assets/Piano.sf2";
   String get piano => _piano.replaceAll('assets/', '').replaceAll(".sf2", "");
   String _sequencer = "assets/ElectronicDrumKit.sf2";
   String get sequencer => _sequencer.replaceAll('assets/', '').replaceAll(".sf2", "");
 
   final _fluttermidi = FlutterMidi();
   StreamSubscription _subscription;
-  List<int> get _midiNotes => (sequencer == "StandardDrumKit" || sequencer == "ElectronicDrumKit") ? PlayerInfo.drumNotes : _pianoNotes;
-  List<int> _pianoNotes;
+  List<int> get _midiNotes => (sequencer == "StandardDrumKit" || sequencer == "ElectronicDrumKit") ? PlayerInfo.drumNotes : PlayerInfo.pianoNotes;
 
   var _selectedColumn = 9;
   var _selectedButtons = new Map<int, Map<int, bool>>();
 
   PlayerState({this.nTracks = 1, this.nButtons = 6, this.bpm = 240}) {
     this._playSpeed = 60000 ~/ bpm;
-    _pianoNotes = List.generate(nTracks, (row) {
-      return scale[row % 5] + 12 * (row / 5).floor();
-    });
     load(_sequencer);
   }
 

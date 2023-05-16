@@ -59,6 +59,10 @@ class _SequencerSoundState extends State<SequencerSound> {
               child: Text('Pulse'),
             ),
             const PopupMenuItem<String>(
+              value: "Beeper",
+              child: Text('Beeper'),
+            ),
+            const PopupMenuItem<String>(
               value: "Saw",
               child: Text('Saw'),
             ),

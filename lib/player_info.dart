@@ -1,6 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+
+// C Major pentatonic scale
+final scale = [48, 50, 52, 55, 57];
+
 class PlayerInfo{
   static final int size = 8;
   static final double width = 400;
@@ -14,8 +18,12 @@ class PlayerInfo{
   static get divisionWidth => width / size;
   static get divisionHeight => height / size;
 
+  static List<int> pianoNotes = List.generate(nSounds, (sound) {
+  return scale[sound % 5] + 12 * (sound / 5).floor();
+  });
+
   static List<int> drumNotes = List.generate(16, (sound) {
-  return 36 + sound;
+    return 36 + sound;
   });
 
   static List<Color> colors = [
