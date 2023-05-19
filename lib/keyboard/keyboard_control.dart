@@ -9,7 +9,7 @@ class KeyboardControl extends StatelessWidget {
     return Container(
       color: Colors.white,
         width: size.width,//isPortrait ? 200 : 600,
-        height: isPortrait ? size.height/2 : size.height/3.2,//isPortrait? 400 : 200,
+        height: isPortrait ? size.height/1.9 : size.height/3.1,//isPortrait? 400 : 200,
         child: FittedBox(
             fit: BoxFit.contain,
             child: Column(
