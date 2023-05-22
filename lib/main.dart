@@ -13,6 +13,7 @@ import 'package:soundfont_player/sequencer/sequencer.dart';
 import 'package:soundfont_player/player_info.dart';
 import 'package:soundfont_player/drumpad/drumpad.dart';
 import 'package:soundfont_player/sequencer/sequencer_sound.dart';
+import 'package:soundfont_player/color.dart';
 
 void main() {
   runApp(
@@ -33,9 +34,9 @@ class SequencerApp extends StatelessWidget {
     ]);
     return MaterialApp(
       title: 'Sequencer',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
+      themeMode: ThemeMode.system,
       home: Scaffold(
         appBar: AppBar(
           title: Text("Sequencer"),
@@ -79,9 +80,9 @@ class DrumPadApp extends StatelessWidget {
     ]);
     return MaterialApp(
       title: 'DrumPad',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
+      themeMode: ThemeMode.system,
       home: Scaffold(
         appBar: AppBar(
             title: Text("DrumPad"),
@@ -117,9 +118,9 @@ class KeyboardApp extends StatelessWidget {
     ]);
     return MaterialApp(
       title: 'Keyboard',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
+      themeMode: ThemeMode.system,
       home: Scaffold(
         appBar: AppBar(title: Text("Keyboard")),
         body: Column(

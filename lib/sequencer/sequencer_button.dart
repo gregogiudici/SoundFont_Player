@@ -25,7 +25,7 @@ class SequencerButton extends StatelessWidget {
             ? buttoncolor.withOpacity(0.5)
             : player.isButtonSelected(column, row)
                 ? buttoncolor
-                : Colors.white;
+                : Theme.of(context).cardColor;
 
         return GestureDetector(
           onTapDown: this.onTapDown,
@@ -35,9 +35,9 @@ class SequencerButton extends StatelessWidget {
             width: PlayerInfo.buttonWidth,
             height: PlayerInfo.buttonHeight,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(5.0),
+              borderRadius: BorderRadius.circular(6.0),
               border: !isTriggered
-                  ? Border.all(width: 2.0, color: buttoncolor)
+                  ? Border.all(width: 2.5, color: buttoncolor)
                   : null,
               boxShadow: isTriggered
                   ? [

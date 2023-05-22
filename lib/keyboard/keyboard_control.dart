@@ -7,7 +7,7 @@ class KeyboardControl extends StatelessWidget {
     var isPortrait = MediaQuery.of(context).orientation == Orientation.portrait;
     Size size = MediaQuery.of(context).size;
     return Container(
-      color: Colors.white,
+      color: Theme.of(context).focusColor,
         width: size.width,//isPortrait ? 200 : 600,
         height: isPortrait ? size.height/2 : size.height/3.2,//isPortrait? 400 : 200,
         child: FittedBox(
