@@ -128,10 +128,10 @@ class PlayerState extends ChangeNotifier {
 
     _subscription = Stream.periodic(
       Duration(milliseconds: _playSpeed),
-    ).listen((value) => playSample());
+    ).listen((value) => playSamples());
   }
 
-  void playSample() {
+  void playSamples() {
     _selectedColumn = (_selectedColumn + 1) % nButtons;
 
     _selectedButtons[_selectedColumn]?.forEach((row, isSelected) {
