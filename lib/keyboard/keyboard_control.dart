@@ -6,10 +6,14 @@ class KeyboardControl extends StatelessWidget {
   Widget build(BuildContext context) {
     var isPortrait = MediaQuery.of(context).orientation == Orientation.portrait;
     Size size = MediaQuery.of(context).size;
+    var isDarkmode = Theme.of(context).brightness == Brightness.dark;
+
     return Container(
-      color: Theme.of(context).focusColor,
-        width: size.width,//isPortrait ? 200 : 600,
-        height: isPortrait ? size.height/1.9 : size.height/3.1,//isPortrait? 400 : 200,
+        color: (isDarkmode) ? Theme.of(context).colorScheme.surface : Colors.white,
+        width: size.width, //isPortrait ? 200 : 600,
+        height: isPortrait
+            ? size.height / 1.9
+            : size.height / 3.1, //isPortrait? 400 : 200,
         child: FittedBox(
             fit: BoxFit.contain,
             child: Column(
@@ -23,15 +27,8 @@ class KeyboardControl extends StatelessWidget {
                             children: List<Widget>.generate(
                                 isPortrait ? 2 : 6,
                                 (j) => Padding(
-                                    padding: const EdgeInsets.only(left: 10.0, right:10.0),
-                                    child:KeyboardButton(2*i+j)
-                                )
-                            )
-                        )
-                    )
-                )
-            )
-        )
-    );
+                                    padding: const EdgeInsets.only(
+                                        left: 10.0, right: 10.0),
+                                    child: KeyboardButton(2 * i + j)))))))));
   }
 }

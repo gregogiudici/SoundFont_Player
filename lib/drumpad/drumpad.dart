@@ -12,11 +12,11 @@ class DrumPad extends StatelessWidget {
     //double padBankHeight = (size.height / 3 );
     double padHeight = size.height / 9;
     double padWidth = size.width / 2;
-
+    var isDarkmode = Theme.of(context).brightness == Brightness.dark;
 
     return Consumer<PlayerState>(builder: (context, player, child) {
       return Container(
-          color: Theme.of(context).focusColor, //Colors.black38,
+          color: (isDarkmode) ? Theme.of(context).focusColor : Colors.white, //Colors.black38,
           child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: List<Widget>.generate(

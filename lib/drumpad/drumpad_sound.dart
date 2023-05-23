@@ -20,7 +20,6 @@ class _DrumPadSoundState extends State<DrumPadSound> {
         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 0),
         decoration: BoxDecoration(
             color: Theme.of(context).colorScheme.background, borderRadius: BorderRadius.circular(10)),
-
         // dropdown below..
         child: DropdownButton<String>(
           icon: Icon(Icons.music_note, color: Colors.blue,),
