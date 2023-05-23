@@ -217,9 +217,12 @@ class MyDrawer extends StatelessWidget {
             Icons.person,
           ),
           applicationName: 'SoundFont Player',
-          //applicationVersion: '1.0.0',
+          applicationVersion: '1.0.0',
           aboutBoxChildren: [
-            Text("Filippo Ceciliani\nGregorio Andrea Giudici\nSilvio Osimi"),
+            Text("Hi, we are a group of students of Università Politecnica delle Marche with passion for music and digital signal processing.\n"
+                "We developed this app about the usage of a SoundFont Player with various UI controls as part of our Master\'s degree in Electronic Engineering.\n"
+                "Hope you enjoy it!\n"),
+            Text("Filippo Ceciliani\nGregorio Andrea Giudici\nSilvio Osimi")
           ],
         ),
       ],

@@ -66,10 +66,10 @@ class PlayerInfo{
 
   static Map<int, String> sounds = const {
     0: 'Piano',
-    1: 'Synth',
-    2: 'Square',
+    1: 'Rhodes',
+    2: 'Synth',
     3: 'Pulse',
     4: 'Saw',
-    5: 'Beeper',
+    5: 'Square',
   };
 }
