@@ -3,7 +3,6 @@ import 'package:soundfont_player/player_info.dart';
 import 'package:provider/provider.dart';
 import 'package:soundfont_player/player_state.dart';
 import 'package:soundfont_player/sequencer/sequencer_button.dart';
-import 'package:soundfont_player/color.dart';
 
 
 class Sequencer extends StatelessWidget {

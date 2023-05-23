@@ -13,7 +13,6 @@ import 'package:soundfont_player/sequencer/sequencer.dart';
 import 'package:soundfont_player/player_info.dart';
 import 'package:soundfont_player/drumpad/drumpad.dart';
 import 'package:soundfont_player/sequencer/sequencer_sound.dart';
-import 'package:soundfont_player/color.dart';
 
 void main() {
   runApp(
