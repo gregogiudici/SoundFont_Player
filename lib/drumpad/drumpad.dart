@@ -4,6 +4,7 @@ import 'package:soundfont_player/drumpad/pad.dart';
 import 'package:soundfont_player/player_info.dart';
 import 'package:soundfont_player/player_state.dart';
 
+
 class DrumPad extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -11,16 +12,17 @@ class DrumPad extends StatelessWidget {
     //double padBankHeight = (size.height / 3 );
     double padHeight = size.height / 9;
     double padWidth = size.width / 2;
+    var isDarkmode = Theme.of(context).brightness == Brightness.dark;
 
     return Consumer<PlayerState>(builder: (context, player, child) {
       return Container(
-          color: Colors.white, //Colors.black38,
+          color: (isDarkmode) ? Theme.of(context).focusColor : Colors.white, //Colors.black38,
           child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: List<Widget>.generate(
                   8,
                   (i) => Padding(
-                      padding: const EdgeInsets.only(top: 10.0),
+                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: List<Widget>.generate(

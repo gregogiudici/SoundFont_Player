@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:soundfont_player/player_state.dart';
 import 'package:soundfont_player/sequencer/sequencer_button.dart';
 
+
 class Sequencer extends StatelessWidget {
 
   final int nButtons;
@@ -51,8 +52,8 @@ class Sequencer extends StatelessWidget {
       width: PlayerInfo.width,
       height: PlayerInfo.height,
       decoration: BoxDecoration(
-          color: Colors.white,//Colors.grey[200],
-          borderRadius: BorderRadius.circular(5.0),
+          color: Theme.of(context).focusColor,//Colors.grey[200],
+          borderRadius: BorderRadius.circular(20.0),
           border: Border.all(width: 2.0, color: Color(0xFF3e3e3e))),
       child: buttonGrid,
     );
