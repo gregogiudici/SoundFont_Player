@@ -15,7 +15,7 @@ class _SequencerSoundState extends State<SequencerSound> {
 
   @override
   Widget build(BuildContext context) {
-    selected = Provider.of<PlayerState>(context, listen: false).sequencer;
+    selected = Provider.of<PlayerState>(context, listen: true).sequencer;
     return CircleAvatar(
         radius: 20,
         backgroundColor: Colors.blue,
