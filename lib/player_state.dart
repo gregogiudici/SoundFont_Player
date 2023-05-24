@@ -35,7 +35,7 @@ class PlayerState extends ChangeNotifier {
   var _selectedColumn = 9;
   var _selectedButtons = new Map<int, Map<int, bool>>();
 
-  PlayerState({this.nTracks = 1, this.nButtons = 6, this.bpm = 240}) {
+  PlayerState({this.nTracks = 1, this.nButtons = 6, this.bpm = 150}) {
     this._playSpeed = 60000 ~/ bpm;
     load(_sequencer);
   }
@@ -80,7 +80,7 @@ class PlayerState extends ChangeNotifier {
   // DRUMPAD & PIANO
   void playNote(int midi) {
     _fluttermidi.playMidiNote(midi: midi);
-    Timer(Duration(milliseconds: 200), () {
+    Timer(Duration(milliseconds: 250), () {
       _fluttermidi.stopMidiNote(midi: midi);
     });
   }
@@ -216,9 +216,9 @@ class PlayerState extends ChangeNotifier {
       }
     }
     print("Parser: $x");
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-      content: Text(x),
-    ));
+    //ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+    //  content: Text(x),
+    //));
     return x;
   }
 
