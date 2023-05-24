@@ -36,7 +36,7 @@ class PlayerState extends ChangeNotifier {
   var _selectedButtons = new Map<int, Map<int, bool>>();
 
   PlayerState({this.nTracks = 1, this.nButtons = 6, this.bpm = 150}) {
-    this._playSpeed = 60000 ~/ bpm;
+    this._playSpeed = 60000 ~/ this.bpm ~/ 2;
     load(_sequencer);
   }
 
