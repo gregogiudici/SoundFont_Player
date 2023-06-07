@@ -125,7 +125,9 @@ class KeyboardApp extends StatelessWidget {
             children: [
               KeyboardControl(),
               SizedBox(
-                height: isPortrait ? size.height/3 : size.height/2.2, //300 : 100,
+                height: isPortrait
+                    ? size.height / 3
+                    : size.height / 2.2, //300 : 100,
                 child: InteractivePiano(
                   //hideScrollbar: true,
                   keyWidth: isPortrait ? 45 : 80,
@@ -208,7 +210,6 @@ class MyDrawer extends StatelessWidget {
         ),
         Divider(),
         AboutListTile(
-          // <-- SEE HERE
           icon: Icon(
             Icons.info,
           ),
@@ -219,7 +220,8 @@ class MyDrawer extends StatelessWidget {
           applicationName: 'SoundFont Player',
           applicationVersion: '1.0.0',
           aboutBoxChildren: [
-            Text("Hi, we are a group of students of Università Politecnica delle Marche with passion for music and digital signal processing.\n"
+            Text(
+                "Hi, we are a group of students of Università Politecnica delle Marche with passion for music and digital signal processing.\n"
                 "We developed this app about the usage of a SoundFont Player with various UI controls as part of our Master\'s degree in Electronic Engineering.\n"
                 "Hope you enjoy it!\n"),
             Text("Filippo Ceciliani\nGregorio Andrea Giudici\nSilvio Osimi")
