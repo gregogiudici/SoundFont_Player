@@ -113,10 +113,10 @@ class PlayerState extends ChangeNotifier {
     }
 
     _selectedButtons[column][row] = true;
-    print(_selectedButtons);
-    print(_selectedButtons[column]);
-    print(_selectedButtons[column][row]);
-    print([column, row]);
+    //print(_selectedButtons);
+    //print(_selectedButtons[column]);
+    //print(_selectedButtons[column][row]);
+    //print([column, row]);
     notifyListeners();
   }
 
