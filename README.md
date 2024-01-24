@@ -45,6 +45,6 @@ flutter run
 
 
 # Acknowledgements and Credits
-This project was done in collaboration with [Silvio Osimi](https://github.com/SilvioOS) and [Filippo Ceciliani](https://github.com/filunivpm), as part of our master's degree program in Electronical Engineering.
+This project was done in collaboration with [Silvio Osimi](https://github.com/SilvioOS) and [Filippo Ceciliani](https://github.com/filunivpm), as part of our master's degree program in Electronic Engineering.
 - Sequencer Widget was inspired by [flutternome](https://github.com/danpanaite/flutternome) and [Creating Music with Flutter](https://medium.com/flutter-community/creating-music-with-flutter-e6b5216a466b)
 - Drumpad Widget was inspired by [flutter-drum-machine-demo](https://github.com/kenreilly/flutter-drum-machine-demo)
