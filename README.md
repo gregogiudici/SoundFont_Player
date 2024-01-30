@@ -1,6 +1,6 @@
 # Soundfont Player
 
-This mobile application is designed for both Android and iOS platforms and serves as a versatile SoundFont player with multiple user interfaces, including a Sequencer, Drumpad, and Keyboard. Whether you're a music enthusiast, a producer, or simply someone who enjoys experimenting with sounds, this app provides a rich and interactive experience.
+This simple app is designed for both Android and iOS platforms and serves as a versatile SoundFont player with multiple user interfaces, including a Sequencer, Drumpad, and Keyboard. Whether you're a music enthusiast, a producer, or simply someone who enjoys experimenting with sounds, this app provides a rich and interactive experience.
 
 ## Features:
 **Sequencer**: Create intricate musical sequences with a user-friendly sequencer interface. Arrange and play your favorite SoundFont files in a sequenced manner, unleashing your creativity and save your favorite sequences.
