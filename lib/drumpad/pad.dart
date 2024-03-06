@@ -1,9 +1,13 @@
+// Code snippet adapted from flutter-drum-machine-demo
+// Link: https://github.com/kenreilly/flutter-drum-machine-demo
+// Author: Kenneth Reilly
+// License: MIT License
+
 import 'package:flutter/material.dart';
 import 'package:soundfont_player/player_info.dart';
 
 class Pad extends StatelessWidget {
-
-  Pad({ this.height, this.width, this.value, @required this.onTapDown});
+  Pad({this.height, this.width, this.value, @required this.onTapDown});
 
   final double height;
   final double width;
@@ -17,7 +21,6 @@ class Pad extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return SizedBox(
         height: height * .82,
         width: width * .88,
@@ -26,16 +29,12 @@ class Pad extends StatelessWidget {
             decoration: BoxDecoration(
                 border: Border.all(color: _color),
                 borderRadius: BorderRadius.all(Radius.circular(4)),
-                color: _color.withOpacity(0.12)
-            ),
+                color: _color.withOpacity(0.12)),
             child: SizedBox.expand(
                 child: InkWell(
-                  enableFeedback: false,
-                  onTap: () => this.onTapDown(value),
-                  child: Center(child: Text(_name)),
-                )
-            )
-        )
-    );
+              enableFeedback: false,
+              onTap: () => this.onTapDown(value),
+              child: Center(child: Text(_name)),
+            ))));
   }
 }
